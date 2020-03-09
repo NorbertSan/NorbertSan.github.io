@@ -42,6 +42,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#fff));
+  background: linear-gradient(to bottom, #fafafa, #fff);
 }
 
 .logo {
@@ -243,13 +245,6 @@ header {
           justify-content: space-between;
 }
 
-.skillsSection__additionalInfo {
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.4rem;
-  margin-top: 100px;
-}
-
 .skillsSection .title {
   font-size: 3.2rem;
   text-align: center;
@@ -264,6 +259,7 @@ header {
   grid-gap: 50px;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+  justify-items: center;
 }
 
 .skillsSection__skillsCards__singleCard {
@@ -301,5 +297,87 @@ header {
 .skillsSection__skillsCards__singleCard__info p {
   font-weight: 300;
   line-height: 27px;
+}
+
+.skillsSection__additionalInfo {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 70px;
+}
+
+.projectsSection {
+  min-height: 80vh;
+  padding: 0 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projectsSection .title {
+  font-size: 3.2rem;
+}
+
+.projectsSection__frame {
+  margin: 50px 0;
+  width: 50vw;
+  height: 60vh;
+  position: relative;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.projectsSection__frame__image {
+  width: 100%;
+  height: 100%;
+}
+
+.projectsSection__frame .arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.projectsSection__frame__leftArrow {
+  left: -50px;
+}
+
+.projectsSection__frame__rightArrow {
+  right: -50px;
+}
+
+.projectsSection__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projectsSection__dots__singleDot {
+  margin: 6px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #353535;
+}
+
+.projectsSection__dots__singleDot.active {
+  background: #353535;
 }
 /*# sourceMappingURL=styles.css.map */
