@@ -22,8 +22,8 @@ body {
 }
 
 .title::first-letter {
+  padding: 7px 0;
   width: 10px;
-  height: 70px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -115,6 +115,28 @@ header {
   grid-gap: 20px;
 }
 
+.aboutSection__doubleArrows {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 50px;
+  -webkit-transform: translateX(-50%) rotate(90deg);
+          transform: translateX(-50%) rotate(90deg);
+  left: 50%;
+  position: absolute;
+}
+
+.aboutSection__doubleArrows__arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.aboutSection__doubleArrows__arrow:first-child {
+  position: relative;
+  left: 8px;
+}
+
 .aboutSection__aboutMeCard {
   padding: 5px 10px 40px;
   -webkit-transform: rotate(-2deg);
@@ -204,5 +226,80 @@ header {
           transform: rotate(2deg);
   max-width: 520px;
   max-height: 340px;
+}
+
+.skillsSection {
+  min-height: 80vh;
+  padding: 150px 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skillsSection__additionalInfo {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 100px;
+}
+
+.skillsSection .title {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.skillsSection__skillsCards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.skillsSection__skillsCards__singleCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skillsSection__skillsCards__singleCard__circle {
+  margin: 15px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #353535;
+  position: relative;
+}
+
+.skillsSection__skillsCards__singleCard__circle__icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.skillsSection__skillsCards__singleCard__info h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.skillsSection__skillsCards__singleCard__info p {
+  font-weight: 300;
+  line-height: 27px;
 }
 /*# sourceMappingURL=styles.css.map */
