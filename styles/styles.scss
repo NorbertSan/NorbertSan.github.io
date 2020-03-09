@@ -74,6 +74,7 @@ header {
     transform: rotate(-2deg);
     min-height: 80%;
     width: 80%;
+    border: 1px solid $secondary-color;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     position: relative;
     display: grid;
@@ -111,6 +112,7 @@ header {
     }
     &__secondaryInfo {
       grid-column: 1/3;
+      border: 1px solid $secondary-color;
       box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
       padding: 10px;
       margin: 10px;
@@ -245,6 +247,7 @@ header {
       height: 100%;
     }
     .arrow {
+      z-index: 1;
       width: 30px;
       height: 30px;
       position: absolute;
@@ -325,6 +328,41 @@ header {
       color: #fff;
       font-weight: 700;
       align-self: flex-start;
+    }
+  }
+}
+
+// FOOTER
+footer {
+  padding-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    img {
+      width: 25px;
+      height: 25px;
+      margin-right: 8px;
+    }
+  }
+  .copyright {
+    flex: 1;
+  }
+  .social {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-right: 12px;
+      width: 35px;
+      height: 35px;
     }
   }
 }
