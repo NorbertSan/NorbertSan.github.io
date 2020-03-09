@@ -1,1 +1,115 @@
 @import "./basics";
+
+header {
+  height: 10vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 1fr 4fr 1fr 10%;
+  color: $secondary-color;
+  align-items: center;
+}
+.logo {
+  text-decoration: none;
+  color: $secondary-color;
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  &__image {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+  }
+}
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  &__item {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+}
+.colorMode {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__image {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+}
+
+// FIRST SECTION
+
+.aboutSection {
+  margin-top: 50px;
+  min-height: 80vh;
+  align-items: center;
+  padding: 0 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  &__aboutMeCard {
+    padding: 5px 10px 40px;
+    transform: rotate(-2deg);
+    min-height: 80%;
+    width: 80%;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 200px 1fr;
+    &__image {
+      width: 100%;
+    }
+    &__clipIcon {
+      position: absolute;
+      top: 2px;
+      left: 7px;
+      width: 20px;
+      height: 20px;
+      z-index: 1;
+    }
+    &__mainInfo {
+      color: $primary-color;
+      padding-left: 20px;
+      font-size: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      &__item {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        &__icon {
+          width: 18px;
+          height: 18px;
+          margin-right: 10px;
+        }
+      }
+    }
+    &__secondaryInfo {
+      grid-column: 1/3;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+      padding: 10px;
+      margin: 10px;
+      position: relative;
+      &__pinIcon {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 3px;
+        left: 3px;
+      }
+    }
+  }
+  &__svgScene {
+    transform: rotate(2deg);
+    max-width: 520px;
+    max-height: 340px;
+  }
+}

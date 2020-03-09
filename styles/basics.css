@@ -2,6 +2,32 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
+  color: #353535;
+}
+
+.text {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 27px;
+}
+
+.title::first-letter {
+  width: 10px;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #0fa0ff;
 }
 /*# sourceMappingURL=basics.css.map */

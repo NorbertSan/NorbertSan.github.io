@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Norbert Sańpruch Portfolio</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
-  </head>
-  <body>
-    12
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Norbert Sańpruch Portfolio</title>
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">
+      <img class="logo__image" src="./assets/icons/user2.svg" alt="user" />
+      <span class="logo__info">Portfolio</span>
+    </a>
+    <nav class="navLinks">
+      <a class="navLinks__item" href="#">
+        <li>O mnie</li>
+      </a>
+      <a class="navLinks__item" href="#">
+        <li>Umiejętności</li>
+      </a>
+      <a class="navLinks__item" href="#">
+        <li>Projekty</li>
+      </a>
+      <a class="navLinks__item" href="#">
+        <li>Kontakt</li>
+      </a>
+    </nav>
+    <div class="colorMode">
+      <img class="colorMode__image" src="./assets/icons/moon.svg" alt="moon" />
+      <span class="colorMode__info">Tryb koloru</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="aboutSection">
+      <div class="aboutSection__aboutMeCard">
+        <img class="aboutSection__aboutMeCard__clipIcon" src="./assets/icons/clip.svg" alt="clip" />
+        <img class="aboutSection__aboutMeCard__image" src="./assets/images/photoOfMe.jpg" src="photo of me" />
+        <div class="aboutSection__aboutMeCard__mainInfo">
+          <div class="aboutSection__aboutMeCard__mainInfo__item">
+            <img class="aboutSection__aboutMeCard__mainInfo__item__icon" src='./assets/icons/user.svg' alt="user" />
+            <span class="aboutSection__aboutMeCard__mainInfo__item__text">Norbert Sańpruch</span>
+          </div>
+
+          <div class="aboutSection__aboutMeCard__mainInfo__item">
+            <img class="aboutSection__aboutMeCard__mainInfo__item__icon" src='./assets/icons/home.svg' alt="home" />
+            <span class="aboutSection__aboutMeCard__mainInfo__item__text">Kraków / Kielce</span>
+          </div>
+
+          <div class="aboutSection__aboutMeCard__mainInfo__item">
+            <img class="aboutSection__aboutMeCard__mainInfo__item__icon" src='./assets/icons/calendar.svg'
+              alt="calendar" />
+            <span class="aboutSection__aboutMeCard__mainInfo__item__text">20 lat</span>
+          </div>
+        </div>
+
+        <div class="aboutSection__aboutMeCard__secondaryInfo">
+          <img class="aboutSection__aboutMeCard__secondaryInfo__pinIcon" src="./assets/icons/pin.svg" alt="pin" />
+          <h1 class="title">Cześć,</h1>
+          <span class="text">Nazywam się Norbert Sańpruch, jestem studentem II
+            roku informatyki stosowanej na AGH. Moim ulubionym działem programowania są technologie webowe których uczę
+            się od prawie roku.Chciałbym w przyszłości pisać strony i aplikacje na większą skalę a także spróbować
+            swoich sił w tworzeniu gier komputerowych.Obecnie szukam możliwości zdobycia swojego pierwszego
+            doświadczenia w branży IT w postaci stażu lub pierwszej pracy jako front-end developer.</span>
+        </div>
+      </div>
+      <img class="aboutSection__svgScene" src="./assets/images/svgScene.svg" alt="svg scene" />
+    </section>
+  </main>
+</body>
+
 </html>
