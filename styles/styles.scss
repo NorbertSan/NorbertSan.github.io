@@ -224,67 +224,86 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  .arrow {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  &__leftArrow {
+    left: 250px;
+  }
+  &__rightArrow {
+    right: 250px;
+  }
   .title {
     font-size: 3.2rem;
   }
   &__frame {
+    overflow: hidden;
     margin: 50px 0;
     width: 50vw;
     height: 60vh;
     position: relative;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-    &:hover &__image {
-      opacity: 0.4;
-    }
-    &:hover::after,
-    &:hover::before {
-      opacity: 1;
-    }
-    &::after,
-    &::before {
-      cursor: pointer;
-      transition: 300ms;
-      opacity: 0;
-      position: absolute;
-      padding: 7px 50px;
-      border: 2px solid $primary-color;
-      z-index: 1;
-      bottom: 30%;
+    &__projectInfo {
+      justify-content: space-around;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      font-size: 2.2rem;
-      font-weight: 500;
-    }
-    &::after {
-      content: "Live";
-      left: 30%;
-      transform: translateX(-30%);
-    }
-    &::before {
-      content: "Code";
-      left: 70%;
-      transform: translateX(-70%);
-    }
-    &__image {
-      transition: 400ms;
-      width: 100%;
-      height: 100%;
-    }
-    .arrow {
-      z-index: 1;
-      width: 30px;
-      height: 30px;
+      padding: 0 10px;
+      width: 250px;
+      min-height: 200px;
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
+      top: 10px;
+      left: 10px;
+      background: white;
+      transform-origin: left top;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+      transform: rotate(-2deg);
+      &__pin {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 13px;
+        height: 13px;
+      }
+      &__buttons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &__link {
+          text-decoration: none;
+          color: $primary-color;
+          font-size: 1.2rem;
+          font-weight: 500;
+          border: 1px solid $primary-color;
+          padding: 3px 12px;
+        }
+      }
+      &__description {
+        font-weight: 300;
+        font-size: 1.3rem;
+      }
     }
-    &__leftArrow {
-      left: -50px;
-    }
-    &__rightArrow {
-      right: -50px;
+    &__slider {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      &__image {
+        padding: 0 10px;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
   &__dots {

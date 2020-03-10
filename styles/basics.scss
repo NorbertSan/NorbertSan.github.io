@@ -1,6 +1,7 @@
 $primary-color: #353535;
 $secondary-color: #a6a6a6;
 $blueish-color: #0fa0ff;
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap");
 * {
   box-sizing: border-box;
@@ -13,6 +14,7 @@ body {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
   color: $primary-color;
+  overflow-x: hidden;
 }
 
 .text {
