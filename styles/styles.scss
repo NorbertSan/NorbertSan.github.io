@@ -8,6 +8,20 @@ header {
   color: $secondary-color;
   align-items: center;
   background: linear-gradient(to bottom, #fafafa, #fff);
+  transform-origin: 50% 0%;
+  transition: all 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  &.hidden {
+    transform: translateY(-100%);
+  }
+  &.active {
+    background: #fff;
+    transform: translateY(0);
+    box-shadow: 0 1px 5px $secondary-color;
+  }
 }
 .logo {
   text-decoration: none;
@@ -36,17 +50,19 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   &__image {
     width: 20px;
     height: 20px;
     margin-right: 5px;
+    transition: 300ms;
   }
 }
 
 // FIRST SECTION
 
 .aboutSection {
-  margin-top: 50px;
+  margin-top: 15vh;
   min-height: 80vh;
   align-items: center;
   padding: 0 15%;
@@ -60,6 +76,15 @@ header {
     transform: translateX(-50%) rotate(90deg);
     left: 50%;
     position: absolute;
+    animation: bounce 2s ease-in-out infinite alternate;
+    @keyframes bounce {
+      0% {
+        transform: translateY(0) translateX(-50%) rotate(90deg);
+      }
+      100% {
+        transform: translateY(20px) translateX(-50%) rotate(90deg);
+      }
+    }
     &__arrow {
       width: 20px;
       height: 20px;
@@ -309,6 +334,9 @@ header {
         border-radius: 5px;
         outline: none;
         border: 1px solid $secondary-color;
+        &:focus {
+          border-color: $blueish-color;
+        }
       }
     }
     &__textarea {
@@ -318,6 +346,9 @@ header {
       border-radius: 5px;
       outline: none;
       border: 1px solid $secondary-color;
+      &:focus {
+        border-color: $blueish-color;
+      }
     }
     &__button {
       padding: 9px 20px;
@@ -345,6 +376,8 @@ footer {
     align-items: center;
     justify-content: center;
     flex: 1;
+    text-decoration: none;
+    color: $primary-color;
     img {
       width: 25px;
       height: 25px;
@@ -359,10 +392,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
+    svg {
       margin-right: 12px;
       width: 35px;
       height: 35px;
+      path {
+        transition: 200ms all ease-in-out;
+      }
+      &:hover path {
+        fill: $blueish-color;
+      }
     }
   }
 }

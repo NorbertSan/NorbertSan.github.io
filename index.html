@@ -1,194 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Norbert Sańpruch Portfolio</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Norbert Sańpruch Portfolio</title>
-  <link rel="stylesheet" href="./styles/styles.css" />
-</head>
-
-<body>
-  <header>
-    <a href="#" class="logo">
-      <img class="logo__image" src="./assets/icons/user2.svg" alt="user" />
-      <span class="logo__info">Portfolio</span>
-    </a>
-    <nav class="navLinks">
-      <a class="navLinks__item" href="#">
-        <li>O mnie</li>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img class="logo__image" src="./assets/icons/user2.svg" alt="user" />
+        <span class="logo__info">Portfolio</span>
       </a>
-      <a class="navLinks__item" href="#">
-        <li>Umiejętności</li>
-      </a>
-      <a class="navLinks__item" href="#">
-        <li>Projekty</li>
-      </a>
-      <a class="navLinks__item" href="#">
-        <li>Kontakt</li>
-      </a>
-    </nav>
-    <div class="colorMode">
-      <img class="colorMode__image" src="./assets/icons/moon.svg" alt="moon" />
-      <span class="colorMode__info">Tryb koloru</span>
-    </div>
-  </header>
-
-  <main>
-    <section class="aboutSection">
-      <div class="aboutSection__doubleArrows">
-        <img class="aboutSection__doubleArrows__arrow" src="./assets/icons/arrowRight.svg" alt="arrow" />
-        <img class="aboutSection__doubleArrows__arrow" src="./assets/icons/arrowRight.svg" alt="arrow" />
+      <nav class="navLinks">
+        <a class="navLinks__item" href="#">
+          <li>O mnie</li>
+        </a>
+        <a class="navLinks__item" href="#">
+          <li>Umiejętności</li>
+        </a>
+        <a class="navLinks__item" href="#">
+          <li>Projekty</li>
+        </a>
+        <a class="navLinks__item" href="#">
+          <li>Kontakt</li>
+        </a>
+      </nav>
+      <div class="colorMode">
+        <img
+          class="colorMode__image"
+          src="./assets/icons/moon.svg"
+          alt="moon"
+        />
+        <span class="colorMode__info">Tryb koloru</span>
       </div>
-      <div class="aboutSection__aboutMeCard">
-        <img class="aboutSection__aboutMeCard__clipIcon" src="./assets/icons/clip.svg" alt="clip" />
-        <img class="aboutSection__aboutMeCard__image" src="./assets/images/photoOfMe.jpg" src="photo of me" />
-        <div class="aboutSection__aboutMeCard__mainInfo">
-          <div class="aboutSection__aboutMeCard__mainInfo__item">
-            <img class="aboutSection__aboutMeCard__mainInfo__item__icon" src='./assets/icons/user.svg' alt="user" />
-            <span class="aboutSection__aboutMeCard__mainInfo__item__text">Norbert Sańpruch</span>
+    </header>
+
+    <main>
+      <section class="aboutSection">
+        <div class="aboutSection__doubleArrows">
+          <img
+            class="aboutSection__doubleArrows__arrow"
+            src="./assets/icons/arrowRight.svg"
+            alt="arrow"
+          />
+          <img
+            class="aboutSection__doubleArrows__arrow"
+            src="./assets/icons/arrowRight.svg"
+            alt="arrow"
+          />
+        </div>
+        <div class="aboutSection__aboutMeCard">
+          <img
+            class="aboutSection__aboutMeCard__clipIcon"
+            src="./assets/icons/clip.svg"
+            alt="clip"
+          />
+          <img
+            class="aboutSection__aboutMeCard__image"
+            src="./assets/images/photoOfMe.jpg"
+            src="photo of me"
+          />
+          <div class="aboutSection__aboutMeCard__mainInfo">
+            <div class="aboutSection__aboutMeCard__mainInfo__item">
+              <img
+                class="aboutSection__aboutMeCard__mainInfo__item__icon"
+                src="./assets/icons/user.svg"
+                alt="user"
+              />
+              <span class="aboutSection__aboutMeCard__mainInfo__item__text"
+                >Norbert Sańpruch</span
+              >
+            </div>
+
+            <div class="aboutSection__aboutMeCard__mainInfo__item">
+              <img
+                class="aboutSection__aboutMeCard__mainInfo__item__icon"
+                src="./assets/icons/home.svg"
+                alt="home"
+              />
+              <span class="aboutSection__aboutMeCard__mainInfo__item__text"
+                >Kraków / Kielce</span
+              >
+            </div>
+
+            <div class="aboutSection__aboutMeCard__mainInfo__item">
+              <img
+                class="aboutSection__aboutMeCard__mainInfo__item__icon"
+                src="./assets/icons/calendar.svg"
+                alt="calendar"
+              />
+              <span class="aboutSection__aboutMeCard__mainInfo__item__text"
+                >20 lat</span
+              >
+            </div>
           </div>
 
-          <div class="aboutSection__aboutMeCard__mainInfo__item">
-            <img class="aboutSection__aboutMeCard__mainInfo__item__icon" src='./assets/icons/home.svg' alt="home" />
-            <span class="aboutSection__aboutMeCard__mainInfo__item__text">Kraków / Kielce</span>
-          </div>
-
-          <div class="aboutSection__aboutMeCard__mainInfo__item">
-            <img class="aboutSection__aboutMeCard__mainInfo__item__icon" src='./assets/icons/calendar.svg'
-              alt="calendar" />
-            <span class="aboutSection__aboutMeCard__mainInfo__item__text">20 lat</span>
+          <div class="aboutSection__aboutMeCard__secondaryInfo">
+            <img
+              class="aboutSection__aboutMeCard__secondaryInfo__pinIcon"
+              src="./assets/icons/pin.svg"
+              alt="pin"
+            />
+            <h1 class="title">Cześć,</h1>
+            <span class="text"
+              >Nazywam się Norbert Sańpruch, jestem studentem II roku
+              informatyki stosowanej na AGH. Moim ulubionym działem
+              programowania są technologie webowe których uczę się od prawie
+              roku.Chciałbym w przyszłości pisać strony i aplikacje na większą
+              skalę a także spróbować swoich sił w tworzeniu gier
+              komputerowych.Obecnie szukam możliwości zdobycia swojego
+              pierwszego doświadczenia w branży IT w postaci stażu lub pierwszej
+              pracy jako front-end developer.</span
+            >
           </div>
         </div>
+        <img
+          class="aboutSection__svgScene"
+          src="./assets/images/svgScene.svg"
+          alt="svg scene"
+        />
+      </section>
 
-        <div class="aboutSection__aboutMeCard__secondaryInfo">
-          <img class="aboutSection__aboutMeCard__secondaryInfo__pinIcon" src="./assets/icons/pin.svg" alt="pin" />
-          <h1 class="title">Cześć,</h1>
-          <span class="text">Nazywam się Norbert Sańpruch, jestem studentem II
-            roku informatyki stosowanej na AGH. Moim ulubionym działem programowania są technologie webowe których uczę
-            się od prawie roku.Chciałbym w przyszłości pisać strony i aplikacje na większą skalę a także spróbować
-            swoich sił w tworzeniu gier komputerowych.Obecnie szukam możliwości zdobycia swojego pierwszego
-            doświadczenia w branży IT w postaci stażu lub pierwszej pracy jako front-end developer.</span>
+      <section class="skillsSection">
+        <h1 class="title">Moje Umiejętności</h1>
+        <div class="skillsSection__skillsCards">
+          <div class="skillsSection__skillsCards__singleCard">
+            <div class="skillsSection__skillsCards__singleCard__circle">
+              <img
+                class="skillsSection__skillsCards__singleCard__circle__icon"
+                src="./assets/icons/html.svg"
+                alt="html"
+              />
+            </div>
+            <div class="skillsSection__skillsCards__singleCard__info">
+              <h3>HTML 5</h3>
+              <p>
+                Staram się pisać czysty, przejrzysty a przede wszystkim
+                semantycznie poprawny kod.
+              </p>
+            </div>
+          </div>
+
+          <div class="skillsSection__skillsCards__singleCard">
+            <div class="skillsSection__skillsCards__singleCard__circle">
+              <img
+                class="skillsSection__skillsCards__singleCard__circle__icon"
+                src="./assets/icons/githubWhite.svg"
+                alt="github"
+              />
+            </div>
+            <div class="skillsSection__skillsCards__singleCard__info">
+              <h3>Git</h3>
+              <p>
+                Chętnie korzystam z Git jako systemu kontroli wersji.Są to
+                proste(na tą chwile) czynności pozwalające przechowywać moje
+                projekty,wykonywane z poziomu konsoli.
+              </p>
+            </div>
+          </div>
+
+          <div class="skillsSection__skillsCards__singleCard">
+            <div class="skillsSection__skillsCards__singleCard__circle">
+              <img
+                class="skillsSection__skillsCards__singleCard__circle__icon"
+                src="./assets/icons/css.svg"
+                alt="css"
+              />
+            </div>
+            <div class="skillsSection__skillsCards__singleCard__info">
+              <h3>CSS / SCSS</h3>
+              <p>
+                Znam css / scss na poziomie umożliwiającym budowanie
+                podstawowych layoutów, animacji, a także budowanie responsywnych
+                widoków.
+              </p>
+            </div>
+          </div>
+
+          <div class="skillsSection__skillsCards__singleCard">
+            <div class="skillsSection__skillsCards__singleCard__circle">
+              <img
+                class="skillsSection__skillsCards__singleCard__circle__icon"
+                src="./assets/icons/react.svg"
+                alt="react"
+              />
+            </div>
+            <div class="skillsSection__skillsCards__singleCard__info">
+              <h3>React</h3>
+              <p>
+                Nauka Reacta pozwala mi bardziej zrozumieć czysty JS. Rozumiem
+                state i umiem nimi zarządzać. Potrafie pisać proste aplikacje w
+                tym frameworku
+              </p>
+            </div>
+          </div>
+
+          <div class="skillsSection__skillsCards__singleCard">
+            <div class="skillsSection__skillsCards__singleCard__circle">
+              <img
+                class="skillsSection__skillsCards__singleCard__circle__icon"
+                src="./assets/icons/javascript.svg"
+                alt="javascript"
+              />
+            </div>
+            <div class="skillsSection__skillsCards__singleCard__info">
+              <h3>Javascript</h3>
+              <p>
+                Potrafię sprawnie pisać proste aplikacje w javascripcie w
+                oparciu o ES6, manipulować DOM’em, pisać kod w przejrzysty
+                sposób.
+              </p>
+            </div>
+          </div>
+
+          <div class="skillsSection__skillsCards__singleCard">
+            <div class="skillsSection__skillsCards__singleCard__circle">
+              <img
+                class="skillsSection__skillsCards__singleCard__circle__icon"
+                src="./assets/icons/english.svg"
+                alt="english"
+              />
+            </div>
+            <div class="skillsSection__skillsCards__singleCard__info">
+              <h3>Język angielski</h3>
+              <p>
+                Potrafię posługiwać się językiem angielskim na poziomie
+                umożliwiającym komunikację ( B2).
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <img class="aboutSection__svgScene" src="./assets/images/svgScene.svg" alt="svg scene" />
+        <div class="skillsSection__additionalInfo">
+          * W najbliższym czasie zamierzam skupić się na naucę Reacta i gita
+        </div>
+      </section>
+
+      <section class="projectsSection">
+        <h1 class="title">Moje projekty</h1>
+        <div class="projectsSection__frame">
+          <img
+            class="projectsSection__frame__image"
+            src="./assets/images/svgScene.svg"
+            alt="project"
+          />
+          <img
+            class="projectsSection__frame__leftArrow arrow"
+            src="./assets/icons/arrowLeft.svg"
+            alt="leftArrow"
+          />
+          <img
+            class="projectsSection__frame__rightArrow arrow"
+            src="./assets/icons/arrowRight.svg"
+            alt="rightArrow"
+          />
+        </div>
+        <div class="projectsSection__dots">
+          <div class="projectsSection__dots__singleDot active"></div>
+          <div class="projectsSection__dots__singleDot"></div>
+          <div class="projectsSection__dots__singleDot"></div>
+        </div>
+      </section>
+    </main>
+
+    <section class="contactSection">
+      <h1 class="title">Zapraszam do kontaktu</h1>
+      <form action="" class="contactSection__form">
+        <div class="contactSection__form__inputs">
+          <input
+            type="name"
+            class="contactSection__form__inputs__singleInput"
+            placeholder="Twoje imie"
+          />
+          <input
+            type="email"
+            class="contactSection__form__inputs__singleInput"
+            placeholder="Twój email"
+          />
+        </div>
+        <textarea
+          type="text"
+          class="contactSection__form__textarea"
+          placeholder="Twoja wiadomość"
+        ></textarea>
+        <button class="contactSection__form__button">Wyślij wiadomość</button>
+      </form>
     </section>
 
-    <section class="skillsSection">
-      <h1 class="title">Moje Umiejętności</h1>
-      <div class="skillsSection__skillsCards">
-        <div class="skillsSection__skillsCards__singleCard">
-          <div class="skillsSection__skillsCards__singleCard__circle">
-            <img class="skillsSection__skillsCards__singleCard__circle__icon" src='./assets/icons/html.svg'
-              alt="html" />
-          </div>
-          <div class="skillsSection__skillsCards__singleCard__info">
-            <h3>HTML 5</h3>
-            <p>Staram się pisać czysty, przejrzysty a przede wszystkim semantycznie poprawny kod.</p>
-          </div>
-        </div>
-
-        <div class="skillsSection__skillsCards__singleCard">
-          <div class="skillsSection__skillsCards__singleCard__circle">
-            <img class="skillsSection__skillsCards__singleCard__circle__icon" src='./assets/icons/githubWhite.svg'
-              alt="github" />
-          </div>
-          <div class="skillsSection__skillsCards__singleCard__info">
-            <h3>Git</h3>
-            <p>Chętnie korzystam z Git jako systemu kontroli wersji.Są to proste(na tą chwile) czynności pozwalające
-              przechowywać moje projekty,wykonywane z poziomu konsoli.</p>
-          </div>
-        </div>
-
-        <div class="skillsSection__skillsCards__singleCard">
-          <div class="skillsSection__skillsCards__singleCard__circle">
-            <img class="skillsSection__skillsCards__singleCard__circle__icon" src='./assets/icons/css.svg' alt="css" />
-          </div>
-          <div class="skillsSection__skillsCards__singleCard__info">
-            <h3>CSS / SCSS</h3>
-            <p>Znam css / scss na poziomie umożliwiającym budowanie podstawowych layoutów, animacji, a także budowanie
-              responsywnych widoków.</p>
-          </div>
-        </div>
-
-        <div class="skillsSection__skillsCards__singleCard">
-          <div class="skillsSection__skillsCards__singleCard__circle">
-            <img class="skillsSection__skillsCards__singleCard__circle__icon" src='./assets/icons/react.svg'
-              alt="react" />
-          </div>
-          <div class="skillsSection__skillsCards__singleCard__info">
-            <h3>React</h3>
-            <p>Nauka Reacta pozwala mi bardziej zrozumieć czysty JS. Rozumiem state i umiem nimi zarządzać. Potrafie
-              pisać proste aplikacje w tym frameworku</p>
-          </div>
-        </div>
-
-        <div class="skillsSection__skillsCards__singleCard">
-          <div class="skillsSection__skillsCards__singleCard__circle">
-            <img class="skillsSection__skillsCards__singleCard__circle__icon" src='./assets/icons/javascript.svg'
-              alt="javascript" />
-          </div>
-          <div class="skillsSection__skillsCards__singleCard__info">
-            <h3>Javascript</h3>
-            <p>Potrafię sprawnie pisać proste aplikacje w javascripcie w oparciu o ES6, manipulować DOM’em, pisać kod w
-              przejrzysty sposób.</p>
-          </div>
-        </div>
-
-        <div class="skillsSection__skillsCards__singleCard">
-          <div class="skillsSection__skillsCards__singleCard__circle">
-            <img class="skillsSection__skillsCards__singleCard__circle__icon" src='./assets/icons/english.svg'
-              alt="english" />
-          </div>
-          <div class="skillsSection__skillsCards__singleCard__info">
-            <h3>Język angielski</h3>
-            <p>Potrafię posługiwać się językiem angielskim na poziomie umożliwiającym komunikację ( B2).</p>
-          </div>
-        </div>
+    <footer>
+      <a href="mailto:norbertsanpruch@gmail.com" class="email">
+        <img src="./assets/icons/mail.svg" alt="mail" />
+        <span>norbertsanpruch@gmail.com</span>
+      </a>
+      <span class="copyright">Copyright © 2020</span>
+      <div class="social">
+        <a href="https://www.facebook.com/norbert.sanpruch" target="_blank">
+          <svg
+            width="512"
+            height="512"
+            viewBox="0 0 512 512"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M297.277 508.668C295.145 509.016 293.004 509.336 290.855 509.629C293.004 509.336 295.145 509.016 297.277 508.668Z"
+              fill="#353535"
+            />
+            <path
+              d="M302.398 507.793C301.379 507.98 300.359 508.152 299.34 508.328C300.359 508.152 301.379 507.98 302.398 507.793Z"
+              fill="#353535"
+            />
+            <path
+              d="M285.137 510.34C282.641 510.621 280.129 510.871 277.609 511.082C280.129 510.871 282.641 510.621 285.137 510.34Z"
+              fill="#353535"
+            />
+            <path
+              d="M290.055 509.738C288.855 509.898 287.648 510.047 286.445 510.188C287.648 510.047 288.855 509.898 290.055 509.738Z"
+              fill="#353535"
+            />
+            <path
+              d="M309.367 506.41C308.469 506.602 307.566 506.793 306.664 506.977C307.566 506.793 308.469 506.602 309.367 506.41Z"
+              fill="#353535"
+            />
+            <path
+              d="M326.664 502.113C325.938 502.32 325.211 502.516 324.484 502.719C325.211 502.516 325.938 502.32 326.664 502.113Z"
+              fill="#353535"
+            />
+            <path
+              d="M321.434 503.543C320.645 503.75 319.852 503.961 319.059 504.16C319.852 503.961 320.645 503.754 321.434 503.543Z"
+              fill="#353535"
+            />
+            <path
+              d="M314.59 505.254C313.754 505.449 312.91 505.633 312.066 505.82C312.91 505.633 313.754 505.449 314.59 505.254Z"
+              fill="#353535"
+            />
+            <path
+              d="M277.527 511.09C276.18 511.203 274.832 511.305 273.48 511.395C274.832 511.305 276.18 511.203 277.527 511.09Z"
+              fill="#353535"
+            />
+            <path
+              d="M512 256C512 114.637 397.363 0 256 0C114.637 0 0 114.637 0 256C0 397.363 114.637 512 256 512C257.504 512 259 511.969 260.5 511.941V312.656H205.5V248.559H260.5V201.391C260.5 146.688 293.895 116.914 342.691 116.914C366.059 116.914 386.145 118.656 392 119.434V176.605H358.352C331.805 176.605 326.664 189.223 326.664 207.734V248.559H390.141L381.867 312.656H326.664V502.109C433.668 471.434 512 372.852 512 256Z"
+              fill="#353535"
+            />
+            <path
+              d="M272.914 511.43C270.25 511.602 267.574 511.738 264.891 511.828C267.574 511.738 270.25 511.602 272.914 511.43Z"
+              fill="#353535"
+            />
+            <path
+              d="M264.754 511.836C263.34 511.883 261.922 511.918 260.504 511.941C261.922 511.918 263.34 511.883 264.754 511.836Z"
+              fill="#353535"
+            />
+          </svg>
+        </a>
+        <a href="https://github.com/NorbertSan" target="_blank"
+          ><svg
+            width="439"
+            height="439"
+            viewBox="0 0 439 439"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0)">
+              <path
+                d="M409.132 114.573C389.524 80.977 362.927 54.379 329.334 34.773C295.736 15.166 259.057 5.36499 219.271 5.36499C179.49 5.36499 142.799 15.169 109.208 34.773C75.612 54.378 49.016 80.977 29.408 114.573C9.803 148.168 0 184.854 0 224.63C0 272.41 13.94 315.375 41.827 353.536C69.711 391.7 105.733 418.108 149.89 432.763C155.03 433.717 158.835 433.046 161.309 430.767C163.784 428.485 165.02 425.627 165.02 422.205C165.02 421.634 164.971 416.497 164.876 406.788C164.778 397.079 164.732 388.609 164.732 381.382L158.165 382.518C153.978 383.285 148.696 383.61 142.319 383.518C135.945 383.429 129.328 382.761 122.477 381.519C115.623 380.288 109.248 377.433 103.347 372.96C97.449 368.487 93.262 362.632 90.787 355.404L87.932 348.834C86.029 344.46 83.033 339.601 78.94 334.275C74.847 328.944 70.708 325.33 66.521 323.427L64.522 321.996C63.19 321.045 61.954 319.898 60.811 318.567C59.669 317.236 58.814 315.904 58.243 314.57C57.671 313.235 58.145 312.14 59.67 311.281C61.195 310.422 63.951 310.005 67.95 310.005L73.658 310.858C77.465 311.621 82.174 313.9 87.791 317.709C93.405 321.515 98.02 326.463 101.637 332.551C106.017 340.357 111.294 346.305 117.483 350.398C123.667 354.491 129.902 356.534 136.182 356.534C142.462 356.534 147.886 356.058 152.456 355.111C157.021 354.159 161.304 352.728 165.303 350.826C167.016 338.068 171.68 328.267 179.291 321.416C168.443 320.276 158.69 318.559 150.027 316.276C141.369 313.99 132.422 310.28 123.192 305.136C113.957 299.999 106.296 293.62 100.207 286.01C94.117 278.396 89.119 268.4 85.22 256.031C81.319 243.657 79.368 229.383 79.368 213.205C79.368 190.17 86.888 170.568 101.925 154.388C94.881 137.07 95.546 117.656 103.922 96.148C109.442 94.433 117.628 95.72 128.476 100.001C139.326 104.284 147.27 107.953 152.316 110.995C157.362 114.036 161.405 116.613 164.451 118.703C182.156 113.756 200.427 111.282 219.269 111.282C238.111 111.282 256.386 113.756 274.092 118.703L284.941 111.854C292.36 107.284 301.121 103.096 311.203 99.289C321.291 95.484 329.005 94.436 334.337 96.151C342.899 117.66 343.662 137.073 336.616 154.391C351.652 170.571 359.175 190.178 359.175 213.208C359.175 229.386 357.217 243.705 353.322 256.174C349.422 268.645 344.381 278.631 338.197 286.153C332.006 293.674 324.296 300.003 315.066 305.139C305.834 310.279 296.884 313.989 288.226 316.275C279.564 318.561 269.811 320.279 258.963 321.421C268.857 329.983 273.805 343.498 273.805 361.96V422.197C273.805 425.619 274.995 428.476 277.377 430.759C279.756 433.038 283.513 433.709 288.653 432.754C332.816 418.101 368.838 391.692 396.721 353.528C424.601 315.367 438.546 272.402 438.546 224.622C438.536 184.851 428.728 148.168 409.132 114.573Z"
+                fill="#353535"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="438.549" height="438.549" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
       </div>
-      <div class=skillsSection__additionalInfo>
-        * W najbliższym czasie zamierzam skupić się na naucę Reacta i gita
-      </div>
-    </section>
+    </footer>
 
-    <section class="projectsSection">
-      <h1 class="title">Moje projekty</h1>
-      <div class="projectsSection__frame">
-        <img class="projectsSection__frame__image" src="./assets/images/svgScene.svg" alt="project">
-        <img class="projectsSection__frame__leftArrow arrow" src="./assets/icons/arrowLeft.svg" alt="leftArrow">
-        <img class="projectsSection__frame__rightArrow arrow" src="./assets/icons/arrowRight.svg" alt="rightArrow">
-      </div>
-      <div class="projectsSection__dots">
-        <div class="projectsSection__dots__singleDot active"></div>
-        <div class="projectsSection__dots__singleDot"></div>
-        <div class="projectsSection__dots__singleDot"></div>
-      </div>
-    </section>
-  </main>
-
-  <section class="contactSection">
-    <h1 class="title">Zapraszam do kontaktu</h1>
-    <form action="" class="contactSection__form">
-      <div class="contactSection__form__inputs">
-        <input type="name" class="contactSection__form__inputs__singleInput" placeholder="Twoje imie" />
-        <input type="email" class="contactSection__form__inputs__singleInput" placeholder="Twój email" />
-      </div>
-      <textarea type="text" class="contactSection__form__textarea" placeholder="Twoja wiadomość"></textarea>
-      <button class="contactSection__form__button">Wyślij wiadomość</button>
-    </form>
-  </section>
-
-  <footer>
-    <div class="email">
-      <img src='./assets/icons/mail.svg' alt="mail" />
-      <span>norbertsanpruch@gmail.com</span>
-    </div>
-    <span class="copyright">Copyright © 2020</span>
-    <div class="social">
-      <a href="#"><img src='./assets/icons/facebook.svg' alt="facebook" /></a>
-      <a href=#><img src='./assets/icons/github.svg' alt="github" /></a>
-    </div>
-  </footer>
-</body>
-
+    <script src="./js/app.js"></script>
+  </body>
 </html>
