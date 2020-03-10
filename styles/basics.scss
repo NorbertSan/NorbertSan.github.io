@@ -16,6 +16,16 @@ body {
   color: $primary-color;
   overflow-x: hidden;
 }
+::-webkit-scrollbar {
+  width: 17px;
+}
+::-webkit-scrollbar-track {
+  background: $primary-color;
+}
+::-webkit-scrollbar-thumb {
+  background: $blueish-color;
+  border-radius: 10px;
+}
 
 .text {
   font-weight: 300;

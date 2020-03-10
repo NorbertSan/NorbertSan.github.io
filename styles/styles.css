@@ -16,6 +16,19 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 17px;
+}
+
+::-webkit-scrollbar-track {
+  background: #353535;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0fa0ff;
+  border-radius: 10px;
+}
+
 .text {
   font-weight: 300;
   font-size: 1.4rem;
@@ -407,6 +420,7 @@ header.active {
 }
 
 .projectsSection__frame__projectInfo {
+  overflow: hidden;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   display: -webkit-box;
@@ -419,9 +433,9 @@ header.active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 10px;
+  padding: 10px;
   width: 250px;
-  min-height: 200px;
+  min-height: 250px;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -443,6 +457,7 @@ header.active {
 }
 
 .projectsSection__frame__projectInfo__buttons {
+  margin-top: 20px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
