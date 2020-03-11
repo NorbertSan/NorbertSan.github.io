@@ -172,9 +172,17 @@ const slider = () => {
   init();
 };
 
+const colorMode = () => {
+  const button = document.querySelector(".colorMode");
+  button.addEventListener("click", () =>
+    document.body.classList.toggle("darkMode")
+  );
+};
+
 const init = () => {
   navigationAppear();
   slider();
+  colorMode();
 };
 
 init();

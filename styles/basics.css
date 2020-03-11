@@ -16,12 +16,48 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
-  width: 17px;
+body.darkMode {
+  background: #353535;
+  color: white;
 }
 
-::-webkit-scrollbar-track {
+body.darkMode * {
+  color: white;
+}
+
+body.darkMode header {
   background: #353535;
+}
+
+body.darkMode .skillsSection__skillsCards__singleCard__circle {
+  background: #a6a6a6;
+}
+
+body.darkMode .projectsSection__frame__projectInfo {
+  background: #353535;
+}
+
+body.darkMode .projectsSection__frame__projectInfo a {
+  border-color: white;
+}
+
+body.darkMode .projectsSection__frame__projectInfo__pin path,
+body.darkMode .social svg path {
+  fill: white;
+}
+
+body.darkMode .projectsSection .arrow path {
+  fill: white;
+}
+
+body.darkMode .contactSection__form {
+  -webkit-box-shadow: 0 0px 2px white;
+          box-shadow: 0 0px 2px white;
+  border-color: white;
+}
+
+::-webkit-scrollbar {
+  width: 17px;
 }
 
 ::-webkit-scrollbar-thumb {

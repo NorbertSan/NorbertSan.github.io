@@ -15,12 +15,39 @@ body {
   font-family: "Roboto", sans-serif;
   color: $primary-color;
   overflow-x: hidden;
+  &.darkMode {
+    background: $primary-color;
+    color: white;
+    * {
+      color: white;
+    }
+    header {
+      background: $primary-color;
+    }
+    .skillsSection__skillsCards__singleCard__circle {
+      background: $secondary-color;
+    }
+    .projectsSection__frame__projectInfo {
+      a {
+        border-color: white;
+      }
+      background: $primary-color;
+    }
+    .projectsSection__frame__projectInfo__pin path,
+    .social svg path {
+      fill: white;
+    }
+    .projectsSection .arrow path {
+      fill: white;
+    }
+    .contactSection__form {
+      box-shadow: 0 0px 2px white;
+      border-color: white;
+    }
+  }
 }
 ::-webkit-scrollbar {
   width: 17px;
-}
-::-webkit-scrollbar-track {
-  background: $primary-color;
 }
 ::-webkit-scrollbar-thumb {
   background: $blueish-color;

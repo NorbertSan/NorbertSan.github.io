@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 
-<body>
+<body class="darkMode">
   <header>
     <a href="#" class="logo">
       <img class="logo__image" src="./assets/icons/user2.svg" alt="user" />
@@ -174,8 +174,26 @@
 
     <section class="projectsSection">
       <h1 class="title">Moje projekty</h1>
-      <img class="projectsSection__leftArrow arrow" src="./assets/icons/arrowLeft.svg" alt="leftArrow" />
-      <img class="projectsSection__rightArrow arrow" src="./assets/icons/arrowRight.svg" alt="rightArrow" />
+      <svg class="projectsSection__leftArrow arrow" width="492" height="492" viewBox="0 0 492 492" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M198.608 246.104L382.664 62.04C387.732 56.984 390.52 50.224 390.52 43.016C390.52 35.804 387.732 29.048 382.664 23.984L366.536 7.864C361.476 2.792 354.712 0 347.504 0C340.296 0 333.54 2.792 328.476 7.864L109.328 227.008C104.244 232.088 101.46 238.876 101.48 246.092C101.46 253.34 104.24 260.12 109.328 265.204L328.272 484.136C333.336 489.208 340.092 492 347.304 492C354.512 492 361.268 489.208 366.336 484.136L382.46 468.016C392.952 457.524 392.952 440.444 382.46 429.956L198.608 246.104Z"
+          fill="#353535" />
+      </svg>
+      <svg class="projectsSection__rightArrow arrow" width="493" height="493" viewBox="0 0 493 493" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+          <path
+            d="M382.678 226.804L163.73 7.86C158.666 2.792 151.906 0 144.698 0C137.49 0 130.73 2.792 125.666 7.86L109.542 23.98C99.05 34.484 99.05 51.556 109.542 62.044L293.398 245.9L109.338 429.96C104.274 435.028 101.478 441.784 101.478 448.988C101.478 456.2 104.274 462.956 109.338 468.028L125.462 484.144C130.53 489.212 137.286 492.004 144.494 492.004C151.702 492.004 158.462 489.212 163.526 484.144L382.678 265C387.754 259.916 390.542 253.128 390.526 245.912C390.542 238.668 387.754 231.884 382.678 226.804Z"
+            fill="#353535" />
+        </g>
+        <defs>
+          <clipPath id="clip0">
+            <rect width="492.004" height="492.004" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+
       <div class="projectsSection__frame">
         <div class="projectsSection__frame__slider">
           <img class="projectsSection__frame__slider__image" src="./assets/images/photo3.jpg" alt="project3"
@@ -196,7 +214,13 @@
             <a href="#" target="_blank" class="projectsSection__frame__projectInfo__buttons__link liveLink">Demo</a>
             <a href="#" target="_blank" class="projectsSection__frame__projectInfo__buttons__link codeLink">Code</a>
           </div>
-          <img src='./assets/icons/pin.svg' class="projectsSection__frame__projectInfo__pin" />
+          <svg class="projectsSection__frame__projectInfo__pin" width="29" height="46" viewBox="0 0 29 46" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M28.036 26.777C28.036 28.005 27.04 29.001 25.812 29.001H18.212L15.105 44.154C15.001 44.673 14.544 45.044 14.018 45.044C13.492 45.044 13.036 44.673 12.93 44.154L9.823 29.001H2.223C0.996001 29.001 0 28.005 0 26.777C0 23.398 1.955 20.372 5.021 18.352V11.721H2.955C1.728 11.721 0.733001 10.726 0.733001 9.498V2.224C0.733001 0.996 1.728 0 2.955 0H7.244H20.793H25.08C26.309 0 27.303 0.996 27.303 2.224V9.498C27.303 10.726 26.309 11.721 25.08 11.721H23.016V18.352C26.081 20.372 28.036 23.398 28.036 26.777Z"
+              fill="#353535" />
+          </svg>
+
         </div>
       </div>
       <div class="projectsSection__dots">
