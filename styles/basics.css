@@ -56,6 +56,18 @@ body.darkMode .contactSection__form {
   border-color: white;
 }
 
+body.darkMode .contactSection__form__inputs__singleInput, body.darkMode .contactSection__form__textarea {
+  color: #353535;
+}
+
+body.darkMode .navLinks__item::after {
+  background: white;
+}
+
+body.darkMode .aboutSection__doubleArrows path {
+  fill: white;
+}
+
 ::-webkit-scrollbar {
   width: 17px;
 }

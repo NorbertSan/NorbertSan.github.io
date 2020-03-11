@@ -43,6 +43,23 @@ header {
   &__item {
     color: $secondary-color;
     text-decoration: none;
+    position: relative;
+    &:hover::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+    &::after {
+      transition: transform 0.3s ease-in-out;
+      content: "";
+      position: absolute;
+      width: 100%;
+      border-radius: 30px;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      transform-origin: 50%;
+      transform: translateX(-50%) scaleX(0);
+      background-color: $secondary-color;
+    }
   }
 }
 .colorMode {
@@ -65,14 +82,19 @@ header {
   margin-top: 15vh;
   min-height: 80vh;
   align-items: center;
-  padding: 0 15%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  // padding: 0 15%;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // grid-gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
   &__doubleArrows {
     cursor: pointer;
     display: flex;
-    bottom: 50px;
+    bottom: 30px;
     transform: translateX(-50%) rotate(90deg);
     left: 50%;
     position: absolute;
@@ -97,9 +119,9 @@ header {
   &__aboutMeCard {
     padding: 5px 10px 40px;
     transform: rotate(-2deg);
-    min-height: 80%;
-    width: 80%;
-    border: 1px solid $secondary-color;
+    min-height: 100%;
+    width: 450px;
+    border: 2px solid $secondary-color;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     position: relative;
     display: grid;
@@ -153,6 +175,10 @@ header {
   }
   &__svgScene {
     transform: rotate(2deg);
+    margin: 60px;
+    margin-top: 100px;
+    // width: 100%;
+
     max-width: 520px;
     max-height: 340px;
   }
@@ -340,16 +366,18 @@ header {
     padding: 0 50px 0 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     min-height: 400px;
-    width: 40%;
+    width: 500px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     &__inputs {
       display: flex;
-      align-items: center;
+      // flex-direction: column;
       justify-content: space-between;
+      flex-wrap: wrap;
       &__singleInput {
-        padding: 9px 25px;
+        margin-top: 20px;
+        padding: 9px 15px;
         color: $primary-color;
         font-weight: 500;
         border-radius: 5px;
@@ -386,7 +414,7 @@ header {
 
 // FOOTER
 footer {
-  padding-bottom: 20px;
+  padding: 50px 0 20px 0;
   text-align: center;
   width: 100%;
   display: flex;
@@ -424,5 +452,14 @@ footer {
         fill: $blueish-color;
       }
     }
+  }
+}
+
+// MEDIA QUERIES
+
+@media screen and(max-width:867px) {
+  .skillsSection__skillsCards {
+    grid-template-columns: 1fr;
+    // display: none;
   }
 }

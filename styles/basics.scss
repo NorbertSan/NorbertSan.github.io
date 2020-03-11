@@ -43,6 +43,16 @@ body {
     .contactSection__form {
       box-shadow: 0 0px 2px white;
       border-color: white;
+      &__inputs__singleInput,
+      &__textarea {
+        color: $primary-color;
+      }
+    }
+    .navLinks__item::after {
+      background: white;
+    }
+    .aboutSection__doubleArrows path {
+      fill: white;
     }
   }
 }

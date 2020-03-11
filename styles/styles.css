@@ -56,6 +56,18 @@ body.darkMode .contactSection__form {
   border-color: white;
 }
 
+body.darkMode .contactSection__form__inputs__singleInput, body.darkMode .contactSection__form__textarea {
+  color: #353535;
+}
+
+body.darkMode .navLinks__item::after {
+  background: white;
+}
+
+body.darkMode .aboutSection__doubleArrows path {
+  fill: white;
+}
+
 ::-webkit-scrollbar {
   width: 17px;
 }
@@ -153,6 +165,31 @@ header.active {
 .navLinks__item {
   color: #a6a6a6;
   text-decoration: none;
+  position: relative;
+}
+
+.navLinks__item:hover::after {
+  -webkit-transform: translateX(-50%) scaleX(1);
+          transform: translateX(-50%) scaleX(1);
+}
+
+.navLinks__item::after {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-radius: 30px;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  -webkit-transform: translateX(-50%) scaleX(0);
+          transform: translateX(-50%) scaleX(0);
+  background-color: #a6a6a6;
 }
 
 .colorMode {
@@ -183,12 +220,15 @@ header.active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 15%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .aboutSection__doubleArrows {
@@ -196,7 +236,7 @@ header.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: 50px;
+  bottom: 30px;
   -webkit-transform: translateX(-50%) rotate(90deg);
           transform: translateX(-50%) rotate(90deg);
   left: 50%;
@@ -241,9 +281,9 @@ header.active {
   padding: 5px 10px 40px;
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
-  min-height: 80%;
-  width: 80%;
-  border: 1px solid #a6a6a6;
+  min-height: 100%;
+  width: 450px;
+  border: 2px solid #a6a6a6;
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   position: relative;
@@ -326,6 +366,8 @@ header.active {
 .aboutSection__svgScene {
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
+  margin: 60px;
+  margin-top: 100px;
   max-width: 520px;
   max-height: 340px;
 }
@@ -593,11 +635,10 @@ header.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   min-height: 400px;
-  width: 40%;
+  width: 500px;
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
@@ -606,16 +647,16 @@ header.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contactSection__form__inputs__singleInput {
-  padding: 9px 25px;
+  margin-top: 20px;
+  padding: 9px 15px;
   color: #353535;
   font-weight: 500;
   border-radius: 5px;
@@ -653,7 +694,7 @@ header.active {
 }
 
 footer {
-  padding-bottom: 20px;
+  padding: 50px 0 20px 0;
   text-align: center;
   width: 100%;
   display: -webkit-box;
@@ -723,5 +764,12 @@ footer .social svg path {
 
 footer .social svg:hover path {
   fill: #0fa0ff;
+}
+
+@media screen and (max-width: 867px) {
+  .skillsSection__skillsCards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
