@@ -58,6 +58,15 @@ body {
     .navLinks {
       background: $primary-color !important;
     }
+    .projectsSection__dots__singleDot {
+      border-color: white;
+      &.active {
+        background: white;
+      }
+    }
+    footer .email svg path {
+      fill: white;
+    }
   }
 }
 ::-webkit-scrollbar {

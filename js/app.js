@@ -35,6 +35,12 @@ const navigationAppear = () => {
     "click",
     () => (doubleArrows.style.display = "none")
   );
+  navLinks.querySelectorAll(".navLinks__item").forEach(link =>
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("open");
+    })
+  );
 };
 const slider = () => {
   const leftArrow = document.querySelector(".projectsSection__leftArrow");
@@ -56,25 +62,25 @@ const slider = () => {
   );
   const projectsInfo = [
     {
-      name: "Chess",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis reprehenderit, modi quas rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo?",
-      liveLink: "http://google.com",
-      codeLink: "https://www.youtube.com/"
-    },
-    {
       name: "Hamburger landing page",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis reprehenderit, modi quas rem facilis vitae sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis",
-      liveLink: "http://google.com",
-      codeLink: "https://www.youtube.com/"
+      liveLink: "https://wizardly-lumiere-8a0dcf.netlify.com",
+      codeLink: "https://github.com/NorbertSan/Burger-Company-Page"
+    },
+    {
+      name: "Chess",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis reprehenderit, modi quas rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo?",
+      liveLink: "https://eloquent-hugle-d6a9b6.netlify.com",
+      codeLink: "https://github.com/NorbertSan/chess"
     },
     {
       name: "Snake",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis reprehenderit Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis reprehenderit",
-      liveLink: "http://google.com",
-      codeLink: "https://www.youtube.com/"
+      liveLink: "https://adoring-chandrasekhar-9707c3.netlify.com",
+      codeLink: "https://github.com/NorbertSan/snakeReact"
     }
   ];
   let index = 1;

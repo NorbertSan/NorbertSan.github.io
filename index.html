@@ -431,7 +431,7 @@
     </section>
 
     <section id="projectsSection" class="projectsSection">
-      <h1 class="title">Moje projekty</h1>
+      <h1 class="title">Moje ostatnie projekty</h1>
       <svg class="projectsSection__leftArrow arrow" width="492" height="492" viewBox="0 0 492 492" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
@@ -454,12 +454,12 @@
 
       <div class="projectsSection__frame">
         <div class="projectsSection__frame__slider">
-          <img class="projectsSection__frame__slider__image" src="./assets/images/photo3.jpg" alt="project3"
+          <img class="projectsSection__frame__slider__image" src="./assets/images/burgerPage.png" alt="project3"
             id="firstClone" />
-          <img class="projectsSection__frame__slider__image" src="./assets/images/photo1.jpg" alt="project1" />
-          <img class="projectsSection__frame__slider__image" src="./assets/images/photo2.jpg" alt="project2" />
-          <img class="projectsSection__frame__slider__image" src="./assets/images/photo3.jpg" alt="project3" />
-          <img class="projectsSection__frame__slider__image" src="./assets/images/photo1.jpg" alt="project1"
+          <img class="projectsSection__frame__slider__image" src="./assets/images/chessGame.png" alt="project1" />
+          <img class="projectsSection__frame__slider__image" src="./assets/images/snake.png" alt="project2" />
+          <img class="projectsSection__frame__slider__image" src="./assets/images/burgerPage.png" alt="project3" />
+          <img class="projectsSection__frame__slider__image" src="./assets/images/chessGame.png" alt="project1"
             id="lastClone" />
         </div>
         <div class="projectsSection__frame__projectInfo">
@@ -491,19 +491,35 @@
 
   <section id="contactSection" class="contactSection">
     <h1 class="title">Zapraszam do kontaktu</h1>
-    <form action="" class="contactSection__form">
+    <form action="https://formspree.io/xlelenll" method="POST" class="contactSection__form">
       <div class="contactSection__form__inputs">
-        <input type="name" class="contactSection__form__inputs__singleInput" placeholder="Twoje imie" />
-        <input type="email" class="contactSection__form__inputs__singleInput" placeholder="Twój email" />
+        <input type="name" class="contactSection__form__inputs__singleInput" placeholder="Twoje imie" required />
+        <input name="_replyto" type="email" class="contactSection__form__inputs__singleInput" placeholder="Twój email"
+          required />
       </div>
-      <textarea type="text" class="contactSection__form__textarea" placeholder="Twoja wiadomość"></textarea>
-      <button class="contactSection__form__button">Wyślij wiadomość</button>
+      <textarea name="message" type="text" class="contactSection__form__textarea" placeholder="Twoja wiadomość"
+        required></textarea>
+      <button type="submit" class="contactSection__form__button">Wyślij wiadomość</button>
     </form>
   </section>
 
   <footer>
     <a href="mailto:norbertsanpruch@gmail.com" class="email">
-      <img src="./assets/icons/mail.svg" alt="mail" />
+      <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M467 61H45.0002C38.0732 61 31.5882 62.703 25.7212 65.51L255 294.789L306.389 245.402C306.389 245.402 306.393 245.397 306.394 245.395C306.395 245.393 306.399 245.391 306.399 245.391L486.286 65.514C480.418 62.705 473.929 61 467 61Z"
+          fill="#353535" />
+        <path
+          d="M507.496 86.728L338.213 256.002L507.49 425.279C510.297 419.412 512 412.927 512 406V106C512 99.077 510.301 92.593 507.496 86.728Z"
+          fill="#353535" />
+        <path
+          d="M4.51 86.7209C1.703 92.5879 0 99.0729 0 106V406C0 412.923 1.701 419.409 4.506 425.274L173.789 256L4.51 86.7209Z"
+          fill="#353535" />
+        <path
+          d="M317.002 277.213L265.606 326.606C262.676 329.536 258.838 331.001 255.001 331.001C251.164 331.001 247.325 329.536 244.396 326.606L195 277.211L25.7139 446.486C31.5819 449.295 38.0709 451 44.9999 451H467C473.927 451 480.412 449.297 486.279 446.49L317.002 277.213Z"
+          fill="#353535" />
+      </svg>
+
       <span>norbertsanpruch@gmail.com</span>
     </a>
     <span class="copyright">Copyright © 2020</span>

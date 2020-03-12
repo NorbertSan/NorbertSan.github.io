@@ -73,6 +73,18 @@ body.darkMode .navLinks {
   background: #353535 !important;
 }
 
+body.darkMode .projectsSection__dots__singleDot {
+  border-color: white;
+}
+
+body.darkMode .projectsSection__dots__singleDot.active {
+  background: white;
+}
+
+body.darkMode footer .email svg path {
+  fill: white;
+}
+
 ::-webkit-scrollbar {
   width: 17px;
 }
