@@ -87,12 +87,14 @@ header {
 .aboutSection {
   margin-top: 15vh;
   min-height: 80vh;
+  padding: 30px;
   align-items: center;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
   &__doubleArrows {
+    opacity: 0;
     cursor: pointer;
     display: flex;
     bottom: 130px;
@@ -186,11 +188,9 @@ header {
     }
   }
   &__svgScene {
-    // transform: rotate(2deg);
-    margin: 60px;
-    margin-top: 100px;
-    max-width: 520px;
-    max-height: 340px;
+    margin-bottom: 150px;
+    position: relative;
+    top: -50px;
   }
 }
 
@@ -199,6 +199,7 @@ header {
 .skillsSection {
   min-height: 80vh;
   padding: 150px 15%;
+  padding-top: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -615,7 +616,7 @@ footer {
     }
   }
   .aboutSection__svgScene {
-    width: 400px;
-    margin-top: 200px;
+    // width: 400px;
+    // margin-top: 200px;
   }
 }

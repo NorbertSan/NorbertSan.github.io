@@ -213,10 +213,31 @@ const colorMode = () => {
   });
 };
 
+const svgScene = () => {
+  const scene = document.querySelector(".aboutSection__svgScene");
+  const floor = document.querySelector("#floor");
+  const stairsAndMan = document.querySelector("#stairsAndMan");
+  const tree = document.querySelector("#tree");
+  const tree2 = document.querySelector("#tree2");
+  const trees = [tree, tree2];
+
+  const tl = gsap.timeline({ defaults: { ease: "power3.inOut" } });
+  tl.set([scene, floor, ...trees, stairsAndMan], { autoAlpha: 0, y: 40 })
+    .to(scene, { duration: 1.5, autoAlpha: 1, y: 0 }, "+=1")
+    .to(floor, {
+      duration: 1,
+      y: 0,
+      autoAlpha: 1
+    })
+    .to([trees], { duration: 3, autoAlpha: 1, y: 0 })
+    .to(stairsAndMan, { duration: 2, autoAlpha: 1, y: 0 }, "-=2");
+};
+
 const init = () => {
   navigationAppear();
   slider();
   colorMode();
+  svgScene();
 };
 
 init();
