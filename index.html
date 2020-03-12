@@ -15,19 +15,19 @@
       <span class="logo__info">Portfolio</span>
     </a>
     <nav class="navLinks">
-      <a class="navLinks__item" href="#">
+      <a class="navLinks__item" href="#aboutSection">
         <img class="navLinks__item__icon" src='./assets/icons/info.svg' alt="skills" />
         <li>O mnie</li>
       </a>
-      <a class="navLinks__item" href="#">
+      <a class="navLinks__item" href="#skillsSection">
         <img class="navLinks__item__icon" src='./assets/icons/skills.svg' alt="skills" />
         <li>Umiejętności</li>
       </a>
-      <a class="navLinks__item" href="#">
+      <a class="navLinks__item" href="#projectsSection">
         <img class="navLinks__item__icon" src='./assets/icons/project.svg' alt="skills" />
         <li>Projekty</li>
       </a>
-      <a class="navLinks__item" href="#">
+      <a class="navLinks__item" href="#contactSection">
         <img class="navLinks__item__icon" src='./assets/icons/contact.svg' alt="skills" />
         <li>Kontakt</li>
       </a>
@@ -44,8 +44,8 @@
   </header>
 
   <main>
-    <section class="aboutSection">
-      <div class="aboutSection__doubleArrows">
+    <section id="aboutSection" class="aboutSection">
+      <a href="#skillsSection" class="aboutSection__doubleArrows">
         <svg class="aboutSection__doubleArrows__arrow" width="493" height="493" viewBox="0 0 493 493" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
@@ -72,8 +72,9 @@
             </clipPath>
           </defs>
         </svg>
-      </div>
+      </a>
       <div class="aboutSection__aboutMeCard">
+        <img class="aboutSection__aboutMeCard__clipIcon2" src="./assets/icons/clip2.svg" alt="clip" />
         <img class="aboutSection__aboutMeCard__clipIcon" src="./assets/icons/clip.svg" alt="clip" />
         <img class="aboutSection__aboutMeCard__image" src="./assets/images/photoOfMe.jpg" src="photo of me" />
         <div class="aboutSection__aboutMeCard__mainInfo">
@@ -110,7 +111,7 @@
       <img class="aboutSection__svgScene" src="./assets/images/svgScene.svg" alt="svg scene" />
     </section>
 
-    <section class="skillsSection">
+    <section id="skillsSection" class="skillsSection">
       <h1 class="title">Moje Umiejętności</h1>
       <div class="skillsSection__skillsCards">
         <div class="skillsSection__skillsCards__singleCard">
@@ -205,7 +206,7 @@
       </div>
     </section>
 
-    <section class="projectsSection">
+    <section id="projectsSection" class="projectsSection">
       <h1 class="title">Moje projekty</h1>
       <svg class="projectsSection__leftArrow arrow" width="492" height="492" viewBox="0 0 492 492" fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -264,7 +265,7 @@
     </section>
   </main>
 
-  <section class="contactSection">
+  <section id="contactSection" class="contactSection">
     <h1 class="title">Zapraszam do kontaktu</h1>
     <form action="" class="contactSection__form">
       <div class="contactSection__form__inputs">

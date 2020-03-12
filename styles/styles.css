@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -290,12 +291,10 @@ header.active {
 }
 
 .aboutSection__aboutMeCard {
-  padding: 5px 10px 40px;
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
-  min-height: 100%;
+  padding: 15px 20px 40px;
+  min-height: 70vh;
   width: 450px;
-  border: 2px solid #a6a6a6;
+  border: 1px solid #a6a6a6;
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   position: relative;
@@ -313,11 +312,22 @@ header.active {
 
 .aboutSection__aboutMeCard__clipIcon {
   position: absolute;
-  top: 2px;
-  left: 7px;
+  top: 10px;
+  left: 18px;
   width: 20px;
   height: 20px;
   z-index: 1;
+}
+
+.aboutSection__aboutMeCard__clipIcon2 {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  top: -25px;
+  left: -25px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .aboutSection__aboutMeCard__mainInfo {
@@ -376,8 +386,6 @@ header.active {
 }
 
 .aboutSection__svgScene {
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
   margin: 60px;
   margin-top: 100px;
   max-width: 520px;
@@ -394,6 +402,9 @@ header.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -534,8 +545,6 @@ header.active {
           transform-origin: left top;
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
 }
 
 .projectsSection__frame__projectInfo__pin {
@@ -604,6 +613,7 @@ header.active {
 }
 
 .projectsSection__dots__singleDot {
+  cursor: pointer;
   -webkit-transition: 300ms;
   transition: 300ms;
   margin: 6px;
@@ -611,6 +621,11 @@ header.active {
   height: 15px;
   border-radius: 50%;
   border: 2px solid #353535;
+}
+
+.projectsSection__dots__singleDot:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .projectsSection__dots__singleDot.active {
@@ -651,7 +666,7 @@ header.active {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   min-height: 400px;
-  width: 500px;
+  width: 700px;
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
@@ -683,7 +698,7 @@ header.active {
 }
 
 .contactSection__form__textarea {
-  padding: 15px;
+  padding: 10px;
   resize: none;
   height: 120px;
   border-radius: 5px;
@@ -708,7 +723,7 @@ header.active {
 }
 
 footer {
-  padding: 50px 0 20px 0;
+  padding: 50px 20px 20px 20px;
   text-align: center;
   width: 100%;
   display: -webkit-box;
@@ -910,6 +925,38 @@ footer .social svg:hover path {
   .hamburger.active .hamburger__line:nth-child(3) {
     -webkit-transform: translateY(-11px) rotate(-45deg);
             transform: translateY(-11px) rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .copyright {
+    margin: 20px;
+  }
+  .projectsSection__leftArrow {
+    left: 0px;
+  }
+  .projectsSection__rightArrow {
+    right: 0px;
+  }
+  .projectsSection__frame {
+    width: 80vw;
+  }
+  .skillsSection {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .contactSection__form {
+    width: 80vw;
+  }
+  .aboutSection__svgScene {
+    width: 400px;
+    margin-top: 200px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -2,6 +2,7 @@ const navigationAppear = () => {
   const header = document.querySelector("header");
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".navLinks");
+  const doubleArrows = document.querySelector(".aboutSection__doubleArrows");
 
   let lastScrollPosition = 0;
   document.addEventListener("scroll", e => {
@@ -30,6 +31,10 @@ const navigationAppear = () => {
     hamburger.classList.toggle("active");
     navLinks.classList.toggle("open");
   });
+  doubleArrows.addEventListener(
+    "click",
+    () => (doubleArrows.style.display = "none")
+  );
 };
 const slider = () => {
   const leftArrow = document.querySelector(".projectsSection__leftArrow");
@@ -178,6 +183,22 @@ const slider = () => {
     setActiveDot();
     changeProjectInfo();
   });
+  dots.forEach((dot, dotIndex) =>
+    dot.addEventListener("click", () => {
+      if (dot.classList.contains("active")) return;
+      if (dotIndex > index) {
+        for (let i = 0; i <= Math.abs(dotIndex - index); i++) {
+          console.log(i);
+          slideRight();
+        }
+      } else {
+        for (let i = 0; i <= Math.abs(dotIndex - index); i++) {
+          console.log(i);
+          slideLeft();
+        }
+      }
+    })
+  );
 
   init();
 };
