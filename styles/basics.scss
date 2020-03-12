@@ -54,6 +54,9 @@ body {
     .aboutSection__doubleArrows path {
       fill: white;
     }
+    .navLinks {
+      background: $primary-color !important;
+    }
   }
 }
 ::-webkit-scrollbar {

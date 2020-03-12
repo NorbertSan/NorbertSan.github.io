@@ -23,6 +23,9 @@ header {
     box-shadow: 0 1px 5px $secondary-color;
   }
 }
+.hamburger {
+  display: none;
+}
 .logo {
   text-decoration: none;
   color: $secondary-color;
@@ -44,6 +47,9 @@ header {
     color: $secondary-color;
     text-decoration: none;
     position: relative;
+    &__icon {
+      display: none;
+    }
     &:hover::after {
       transform: translateX(-50%) scaleX(1);
     }
@@ -69,8 +75,8 @@ header {
   justify-content: center;
   cursor: pointer;
   &__image {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin-right: 5px;
     transition: 300ms;
   }
@@ -94,11 +100,11 @@ header {
   &__doubleArrows {
     cursor: pointer;
     display: flex;
-    bottom: 30px;
+    bottom: 130px;
     transform: translateX(-50%) rotate(90deg);
     left: 50%;
     position: absolute;
-    animation: bounce 2s ease-in-out infinite alternate;
+    animation: bounce 1s ease-in-out infinite alternate;
     @keyframes bounce {
       0% {
         transform: translateY(0) translateX(-50%) rotate(90deg);
@@ -327,7 +333,7 @@ header {
       left: 0;
       display: flex;
       &__image {
-        padding: 0 10px;
+        // padding: 0 10px;
         object-fit: cover;
         width: 100%;
         height: 100%;
@@ -339,6 +345,7 @@ header {
     align-items: center;
     justify-content: center;
     &__singleDot {
+      transition: 300ms;
       margin: 6px;
       width: 15px;
       height: 15px;
@@ -377,7 +384,8 @@ header {
       flex-wrap: wrap;
       &__singleInput {
         margin-top: 20px;
-        padding: 9px 15px;
+        padding: 9px 10px;
+        width: 190px;
         color: $primary-color;
         font-weight: 500;
         border-radius: 5px;
@@ -456,10 +464,116 @@ footer {
 }
 
 // MEDIA QUERIES
+@media screen and(max-width:1250px) {
+  .projectsSection__leftArrow {
+    left: 150px;
+  }
+  .projectsSection__rightArrow {
+    right: 150px;
+  }
+}
 
 @media screen and(max-width:867px) {
   .skillsSection__skillsCards {
     grid-template-columns: 1fr;
-    // display: none;
+  }
+  .projectsSection {
+    &__leftArrow {
+      left: 50px;
+    }
+    &__rightArrow {
+      right: 50px;
+    }
+    &__frame {
+      width: 70vw;
+    }
+  }
+  .contactSection {
+    &__form {
+      width: 70vw;
+      &__inputs {
+        &__singleInput {
+          width: 220px;
+        }
+      }
+    }
+  }
+  footer {
+    font-size: 1.3rem;
+    .social svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .navLinks {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    height: 30vh;
+    width: 100%;
+    background: #fafafa;
+    box-shadow: 0 1px 5px $secondary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(100px at 800px -200px);
+    transition: clip-path 0.4s ease-in-out;
+    &.open {
+      clip-path: circle(1200px at 800px -200px);
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      font-style: italic;
+      letter-spacing: 1px;
+      &__icon {
+        margin-right: 15px;
+        display: block;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+  .logo {
+    font-size: 1.5rem;
+    &__image {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .hamburger {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    padding: 3px;
+    background: transparent;
+    border: none;
+    margin: 0;
+    outline: none;
+    &__line {
+      transition: all 0.3s ease-in-out;
+      margin-top: 5px;
+      width: 100%;
+      height: 4px;
+      background: $secondary-color;
+    }
+    &.active {
+      .hamburger__line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger__line:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger__line:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+      }
+    }
   }
 }

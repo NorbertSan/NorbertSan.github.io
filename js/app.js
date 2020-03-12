@@ -1,5 +1,8 @@
 const navigationAppear = () => {
   const header = document.querySelector("header");
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".navLinks");
+
   let lastScrollPosition = 0;
   document.addEventListener("scroll", e => {
     const currentPosition = window.pageYOffset;
@@ -11,6 +14,8 @@ const navigationAppear = () => {
     }
     if (currentPosition > lastScrollPosition) {
       // scroll down
+      navLinks.classList.remove("open");
+      hamburger.classList.remove("active");
       header.classList.remove("active");
       header.classList.add("hidden");
     } else {
@@ -19,6 +24,11 @@ const navigationAppear = () => {
       header.classList.add("active");
     }
     lastScrollPosition = currentPosition;
+  });
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("open");
   });
 };
 const slider = () => {
@@ -171,12 +181,15 @@ const slider = () => {
 
   init();
 };
-
 const colorMode = () => {
   const button = document.querySelector(".colorMode");
-  button.addEventListener("click", () =>
-    document.body.classList.toggle("darkMode")
-  );
+  const image = button.querySelector("img");
+  button.addEventListener("click", () => {
+    document.body.classList.toggle("darkMode");
+    if (document.body.classList.contains("darkMode"))
+      image.src = "./../assets/icons/moon.svg";
+    else image.src = "./../assets/icons/sun.svg";
+  });
 };
 
 const init = () => {

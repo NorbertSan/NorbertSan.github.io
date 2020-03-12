@@ -68,6 +68,10 @@ body.darkMode .aboutSection__doubleArrows path {
   fill: white;
 }
 
+body.darkMode .navLinks {
+  background: #353535 !important;
+}
+
 ::-webkit-scrollbar {
   width: 17px;
 }
