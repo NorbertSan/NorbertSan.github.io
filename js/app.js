@@ -64,21 +64,21 @@ const slider = () => {
     {
       name: "Hamburger landing page",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis reprehenderit, modi quas rem facilis vitae sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis",
+        "Prosta statyczna responsywna strona główna. Jedna z moich pierwszych stron z użyciem media queries.Projekt nauczył mnie praktycznego stosowania media queries,budowania layoutu.Wykorzystane technologie JS / SCSS / HTML",
       liveLink: "https://wizardly-lumiere-8a0dcf.netlify.com",
       codeLink: "https://github.com/NorbertSan/Burger-Company-Page"
     },
     {
       name: "Chess",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis reprehenderit, modi quas rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo? rem facilis vitae adipisci aliquid quo nemo?",
+        "W pełni skończona gra w szachy napisana w React, gra zawiera wszystkie możliwe ruchy. Projekt nauczył mnie sprawnego zarządzania stanami aplikacji, w trakcie implementacji napotkałem dużo problemów związanych z samą logiką gry.",
       liveLink: "https://eloquent-hugle-d6a9b6.netlify.com",
       codeLink: "https://github.com/NorbertSan/chess"
     },
     {
       name: "Snake",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis reprehenderit Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit corrupti consectetur ipsam praesentium Nobis reprehenderit",
+        "Prosta gra 'snake'.Pierwszy samodzielny projekt w React. Projekt nauczył mnie podstawowych założeń tego frameworku, zagadnień związanych z komponentami i stanami aplikacji.",
       liveLink: "https://adoring-chandrasekhar-9707c3.netlify.com",
       codeLink: "https://github.com/NorbertSan/snakeReact"
     }
@@ -194,17 +194,19 @@ const slider = () => {
       if (dot.classList.contains("active")) return;
       if (dotIndex > index) {
         for (let i = 0; i <= Math.abs(dotIndex - index); i++) {
-          console.log(i);
           slideRight();
         }
       } else {
         for (let i = 0; i <= Math.abs(dotIndex - index); i++) {
-          console.log(i);
           slideLeft();
         }
       }
     })
   );
+  window.addEventListener("resize", () => {
+    sliderWidth = slider.getBoundingClientRect().width;
+    slider.style.transform = `translateX(-${sliderWidth * index}px)`;
+  });
 
   init();
 };
@@ -218,7 +220,6 @@ const colorMode = () => {
     else image.src = "./../assets/icons/sun.svg";
   });
 };
-
 const svgScene = () => {
   const scene = document.querySelector(".aboutSection__svgScene");
   const floor = document.querySelector("#floor");
@@ -238,12 +239,22 @@ const svgScene = () => {
     .to([trees], { duration: 3, autoAlpha: 1, y: 0 })
     .to(stairsAndMan, { duration: 2, autoAlpha: 1, y: 0 }, "-=2");
 };
+const autoColorMode = () => {
+  const image = document.querySelector(".colorMode img");
+  const hours = new Date().getHours();
+  if (hours >= 21 || hours <= 6) {
+    // dark mode
+    document.body.classList.add("darkMode");
+    image.src = "./../assets/icons/moon.svg";
+  }
+};
 
 const init = () => {
   navigationAppear();
   slider();
   colorMode();
   svgScene();
+  autoColorMode();
 };
 
 init();
