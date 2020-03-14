@@ -405,6 +405,7 @@ header.active {
   margin-bottom: 50px;
   position: relative;
   top: -50px;
+  opacity: 0;
 }
 
 .skillsSection {
