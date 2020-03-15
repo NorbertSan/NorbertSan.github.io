@@ -110,6 +110,17 @@ body.darkMode footer .email svg path {
   background: #0fa0ff;
 }
 
+.title {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2.6rem;
+  }
+}
+
 header {
   height: 10vh;
   width: 100%;
@@ -428,8 +439,6 @@ header.active {
 }
 
 .skillsSection .title {
-  font-size: 3.2rem;
-  text-align: center;
   margin-bottom: 150px;
 }
 
@@ -521,11 +530,6 @@ header.active {
 
 .projectsSection__rightArrow {
   right: 250px;
-}
-
-.projectsSection .title {
-  font-size: 3.2rem;
-  text-align: center;
 }
 
 .projectsSection__frame {
@@ -669,10 +673,6 @@ header.active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.contactSection .title {
-  font-size: 3.2rem;
 }
 
 .contactSection__form {
@@ -842,6 +842,9 @@ footer .social svg:hover path {
   }
   .contactSection__form {
     width: 70vw;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .contactSection__form__inputs__singleInput {
     width: 220px;

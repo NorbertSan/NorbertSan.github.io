@@ -109,4 +109,15 @@ body.darkMode footer .email svg path {
           transform: translate(-50%, -50%);
   background: #0fa0ff;
 }
+
+.title {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2.6rem;
+  }
+}
 /*# sourceMappingURL=basics.css.map */
