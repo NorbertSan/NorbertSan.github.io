@@ -141,7 +141,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 999;
 }
 
 header.hidden {
@@ -860,7 +860,6 @@ footer .social svg:hover path {
     position: fixed;
     top: 10vh;
     left: 0;
-    height: 30vh;
     width: 100%;
     background: #fafafa;
     -webkit-box-shadow: 0 1px 5px #a6a6a6;
@@ -875,16 +874,13 @@ footer .social svg:hover path {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-clip-path: circle(100px at 800px -200px);
-            clip-path: circle(100px at 800px -200px);
-    -webkit-transition: -webkit-clip-path 0.4s ease-in-out;
-    transition: -webkit-clip-path 0.4s ease-in-out;
-    transition: clip-path 0.4s ease-in-out;
-    transition: clip-path 0.4s ease-in-out, -webkit-clip-path 0.4s ease-in-out;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
   .navLinks.open {
-    -webkit-clip-path: circle(1200px at 800px -200px);
-            clip-path: circle(1200px at 800px -200px);
+    height: 30vh;
   }
   .navLinks__item {
     display: -webkit-box;
@@ -950,6 +946,9 @@ footer .social svg:hover path {
   .hamburger.active .hamburger__line:nth-child(3) {
     -webkit-transform: translateY(-11px) rotate(-45deg);
             transform: translateY(-11px) rotate(-45deg);
+  }
+  .navLinks__item::after {
+    display: none;
   }
 }
 

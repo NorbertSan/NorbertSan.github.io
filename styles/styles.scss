@@ -13,7 +13,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 999;
   &.hidden {
     transform: translateY(-100%);
   }
@@ -518,17 +518,17 @@ footer {
     position: fixed;
     top: 10vh;
     left: 0;
-    height: 30vh;
     width: 100%;
     background: #fafafa;
     box-shadow: 0 1px 5px $secondary-color;
     display: flex;
     flex-direction: column;
     align-items: center;
-    clip-path: circle(100px at 800px -200px);
-    transition: clip-path 0.4s ease-in-out;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
     &.open {
-      clip-path: circle(1200px at 800px -200px);
+      height: 30vh;
     }
     &__item {
       display: flex;
@@ -583,6 +583,11 @@ footer {
       .hamburger__line:nth-child(3) {
         transform: translateY(-11px) rotate(-45deg);
       }
+    }
+  }
+  .navLinks__item {
+    &::after {
+      display: none;
     }
   }
 }
