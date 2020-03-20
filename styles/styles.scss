@@ -593,6 +593,10 @@ footer {
 }
 
 @media screen and(max-width:600px) {
+  .projectsSection__leftArrow,
+  .projectsSection__rightArrow {
+    display: none;
+  }
   footer {
     flex-direction: column;
     .copyright {

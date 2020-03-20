@@ -62,12 +62,12 @@ const slider = () => {
   );
   const projectsInfo = [
     {
-      name: "Hamburger landing page",
-      description:
-        "Prosta statyczna responsywna strona główna. Jedna z moich pierwszych stron z użyciem media queries.Projekt nauczył mnie praktycznego stosowania media queries,budowania layoutu.Wykorzystane technologie JS / SCSS / HTML",
-      liveLink: "https://wizardly-lumiere-8a0dcf.netlify.com",
-      codeLink: "https://github.com/NorbertSan/Burger-Company-Page"
+      name: "Tetris",
+      description: "Popularna gra tetris napisana w React",
+      liveLink: "https://affectionate-babbage-0e6846.netlify.com/",
+      codeLink: "https://github.com/NorbertSan/tetris-game"
     },
+
     {
       name: "Chess",
       description:
@@ -81,6 +81,13 @@ const slider = () => {
         "Prosta gra 'snake'.Pierwszy samodzielny projekt w React. Projekt nauczył mnie podstawowych założeń tego frameworku, zagadnień związanych z komponentami i stanami aplikacji.",
       liveLink: "https://adoring-chandrasekhar-9707c3.netlify.com",
       codeLink: "https://github.com/NorbertSan/snakeReact"
+    },
+    {
+      name: "Hamburger landing page",
+      description:
+        "Prosta statyczna responsywna strona główna. Jedna z moich pierwszych stron z użyciem media queries.Projekt nauczył mnie praktycznego stosowania media queries,budowania layoutu.Wykorzystane technologie JS / SCSS / HTML",
+      liveLink: "https://wizardly-lumiere-8a0dcf.netlify.com",
+      codeLink: "https://github.com/NorbertSan/Burger-Company-Page"
     }
   ];
   let index = 1;

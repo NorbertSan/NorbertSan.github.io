@@ -953,6 +953,10 @@ footer .social svg:hover path {
 }
 
 @media screen and (max-width: 600px) {
+  .projectsSection__leftArrow,
+  .projectsSection__rightArrow {
+    display: none;
+  }
   footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
