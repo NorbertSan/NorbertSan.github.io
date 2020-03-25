@@ -76,11 +76,11 @@ const slider = () => {
       codeLink: "https://github.com/NorbertSan/chess"
     },
     {
-      name: "Snake",
+      name: "Hangman",
       description:
-        "Prosta gra 'snake'.Pierwszy samodzielny projekt w React. Projekt nauczył mnie podstawowych założeń tego frameworku, zagadnień związanych z komponentami i stanami aplikacji.",
-      liveLink: "https://adoring-chandrasekhar-9707c3.netlify.com",
-      codeLink: "https://github.com/NorbertSan/snakeReact"
+        "Gra w wisielca napisana w 100% w css, bez grafik.Projekt wykonany w react z pomocą reduxa i styled-components.Projekt pozwolił mi zrozumieć przeznaczenie korzystania z redux'a, nauczył mnie korzystania z tego menagera stanu jako bardzo przydatnego narzędzia.",
+      liveLink: "https://mystifying-kilby-f6f86d.netlify.com/",
+      codeLink: "https://github.com/NorbertSan/hangman-react-redux"
     },
     {
       name: "Hamburger landing page",
