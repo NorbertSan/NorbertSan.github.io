@@ -450,7 +450,7 @@ header.active {
   grid-gap: 50px;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  justify-items: center;
+  justify-items: flex-start;
 }
 
 .skillsSection__skillsCards__singleCard {

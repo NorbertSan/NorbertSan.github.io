@@ -213,7 +213,7 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
     grid-template-rows: auto;
-    justify-items: center;
+    justify-items: flex-start;
     &__singleCard {
       display: flex;
       &__circle {
