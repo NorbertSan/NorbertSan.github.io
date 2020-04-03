@@ -5,7 +5,7 @@ const navigationAppear = () => {
   const doubleArrows = document.querySelector(".aboutSection__doubleArrows");
 
   let lastScrollPosition = 0;
-  document.addEventListener("scroll", e => {
+  document.addEventListener("scroll", (e) => {
     const currentPosition = window.pageYOffset;
     if (currentPosition < header.getBoundingClientRect().height + 100) {
       lastScrollPosition = currentPosition;
@@ -35,7 +35,7 @@ const navigationAppear = () => {
     "click",
     () => (doubleArrows.style.display = "none")
   );
-  navLinks.querySelectorAll(".navLinks__item").forEach(link =>
+  navLinks.querySelectorAll(".navLinks__item").forEach((link) =>
     link.addEventListener("click", () => {
       hamburger.classList.remove("active");
       navLinks.classList.remove("open");
@@ -65,30 +65,29 @@ const slider = () => {
       name: "Tetris",
       description: "Popularna gra tetris napisana w React",
       liveLink: "https://affectionate-babbage-0e6846.netlify.com/",
-      codeLink: "https://github.com/NorbertSan/tetris-game"
+      codeLink: "https://github.com/NorbertSan/tetris-game",
     },
-
     {
-      name: "Chess",
+      name: "Projekt sklepu internetowego",
       description:
-        "W pełni skończona gra w szachy napisana w React, gra zawiera wszystkie możliwe ruchy. Projekt nauczył mnie sprawnego zarządzania stanami aplikacji, w trakcie implementacji napotkałem dużo problemów związanych z samą logiką gry.",
-      liveLink: "https://eloquent-hugle-d6a9b6.netlify.com",
-      codeLink: "https://github.com/NorbertSan/chess"
+        "Strona napisana w react wraz z reduxem. Pozwala na filtrowanie produktów i obsługę koszyka.",
+      liveLink: "https://zealous-wescoff-1aa9c0.netlify.com/",
+      codeLink: "https://github.com/NorbertSan/coffee-shop",
     },
     {
       name: "Hangman",
       description:
         "Gra w wisielca napisana w 100% w css, bez grafik.Projekt wykonany w react z pomocą reduxa i styled-components.Projekt pozwolił mi zrozumieć przeznaczenie korzystania z redux'a, nauczył mnie korzystania z tego menagera stanu jako bardzo przydatnego narzędzia.",
       liveLink: "https://mystifying-kilby-f6f86d.netlify.com/",
-      codeLink: "https://github.com/NorbertSan/hangman-react-redux"
+      codeLink: "https://github.com/NorbertSan/hangman-react-redux",
     },
     {
-      name: "Hamburger landing page",
+      name: "Chess",
       description:
-        "Prosta statyczna responsywna strona główna. Jedna z moich pierwszych stron z użyciem media queries.Projekt nauczył mnie praktycznego stosowania media queries,budowania layoutu.Wykorzystane technologie JS / SCSS / HTML",
-      liveLink: "https://wizardly-lumiere-8a0dcf.netlify.com",
-      codeLink: "https://github.com/NorbertSan/Burger-Company-Page"
-    }
+        "W pełni skończona gra w szachy napisana w React, gra zawiera wszystkie możliwe ruchy. Projekt nauczył mnie sprawnego zarządzania stanami aplikacji, w trakcie implementacji napotkałem dużo problemów związanych z samą logiką gry.",
+      liveLink: "https://eloquent-hugle-d6a9b6.netlify.com",
+      codeLink: "https://github.com/NorbertSan/chess",
+    },
   ];
   let index = 1;
   const amountOfImages = images.length;
@@ -102,17 +101,17 @@ const slider = () => {
     leftArrow.addEventListener("click", slideLeft);
     rightArrow.addEventListener("click", slideRight);
 
-    document.body.addEventListener("keyup", e => {
+    document.body.addEventListener("keyup", (e) => {
       e.keyCode === 37 && slideLeft();
       e.keyCode === 39 && slideRight();
     });
 
     let lastPosition;
     let currentPosition;
-    slider.addEventListener("touchstart", e => {
+    slider.addEventListener("touchstart", (e) => {
       lastPosition = e.touches[0].clientX;
     });
-    slider.addEventListener("touchend", e => {
+    slider.addEventListener("touchend", (e) => {
       currentPosition = e.changedTouches[0].clientX;
       if (Math.abs(currentPosition - lastPosition) < 25) return;
       if (currentPosition > lastPosition) {
@@ -132,7 +131,7 @@ const slider = () => {
     }, 600);
   };
   const setActiveDot = () => {
-    dots.forEach(dot => {
+    dots.forEach((dot) => {
       dot.classList.remove("active");
     });
     dots[index % dots.length].classList.add("active");
@@ -142,22 +141,22 @@ const slider = () => {
     tl.to([name, description, ...buttons], {
       duration: 0.3,
       y: "20",
-      opacity: 0
+      opacity: 0,
     })
       .set(name, { textContent: projectsInfo[index % dots.length].name })
       .set(description, {
-        textContent: projectsInfo[index % dots.length].description
+        textContent: projectsInfo[index % dots.length].description,
       })
       .set(codeLink, {
-        href: projectsInfo[index % dots.length].codeLink
+        href: projectsInfo[index % dots.length].codeLink,
       })
       .set(liveLink, {
-        href: projectsInfo[index % dots.length].liveLink
+        href: projectsInfo[index % dots.length].liveLink,
       })
       .to([name, description, ...buttons], {
         duration: 0.3,
         y: "0",
-        opacity: 1
+        opacity: 1,
       });
 
     // name.textContent = projectsInfo[index % dots.length].name;
@@ -241,7 +240,7 @@ const svgScene = () => {
     .to(floor, {
       duration: 1,
       y: 0,
-      autoAlpha: 1
+      autoAlpha: 1,
     })
     .to([trees], { duration: 3, autoAlpha: 1, y: 0 })
     .to(stairsAndMan, { duration: 2, autoAlpha: 1, y: 0 }, "-=2");
