@@ -68,18 +68,18 @@ const slider = () => {
       codeLink: "https://github.com/NorbertSan/tetris-game",
     },
     {
+      name: "Social media application",
+      description:
+        "Aplikacja na podstawie twitter'a. Backend stworzony w : Node.js,MySQL,express,uwierzytelnianie za pomocą JWT. Cześć front-end napisana w React,Redux ",
+      liveLink: "https://connlife.herokuapp.com/",
+      codeLink: "https://github.com/NorbertSan/ConnLife-client",
+    },
+    {
       name: "Projekt sklepu internetowego",
       description:
         "Strona napisana w react wraz z reduxem. Pozwala na filtrowanie produktów i obsługę koszyka.",
       liveLink: "https://zealous-wescoff-1aa9c0.netlify.com/",
       codeLink: "https://github.com/NorbertSan/coffee-shop",
-    },
-    {
-      name: "Hangman",
-      description:
-        "Gra w wisielca napisana w 100% w css, bez grafik.Projekt wykonany w react z pomocą reduxa i styled-components.Projekt pozwolił mi zrozumieć przeznaczenie korzystania z redux'a, nauczył mnie korzystania z tego menagera stanu jako bardzo przydatnego narzędzia.",
-      liveLink: "https://mystifying-kilby-f6f86d.netlify.com/",
-      codeLink: "https://github.com/NorbertSan/hangman-react-redux",
     },
     {
       name: "Chess",
